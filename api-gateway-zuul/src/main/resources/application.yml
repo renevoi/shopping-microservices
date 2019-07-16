@@ -1,0 +1,28 @@
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+  routes:
+    eureka-server:
+      path: /server/**
+      url: http://localhost:8761
+    amazon-shopping-service1:
+      path: /amazon-shopping/**
+#      serviceId: amazon-shopping-service
+      url: http://localhost:9091/
+    payment-service1:
+      path: /payment/**
+      url: http://localhost:9094/payment-provider/
+
+spring:
+  application:
+    name: api-gateway-zuul
+
+server:
+  port: 8888
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8888/eureka/
+#  instance:
+#    hostname: localhost

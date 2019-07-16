@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: amazon-shopping-service
+server:
+  port: 9091
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
